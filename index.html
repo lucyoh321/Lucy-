@@ -11,8 +11,8 @@
 body{font-family:'Nunito',sans-serif;background:var(--bg);min-height:100vh;color:var(--text);overflow-x:hidden}
 body::before{content:'';position:fixed;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(192,132,252,.12) 0%,transparent 70%);border-radius:50%;pointer-events:none;z-index:0}
 body::after{content:'';position:fixed;bottom:-30%;left:-15%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,107,157,.10) 0%,transparent 70%);border-radius:50%;pointer-events:none;z-index:0}
-.container{max-width:480px;margin:0 auto;padding:20px 16px 60px;position:relative;z-index:1}
-.header{text-align:center;padding:24px 0 20px}
+.container{max-width:520px;margin:0 auto;padding:20px 16px 60px;position:relative;z-index:1}
+.header{text-align:center;padding:20px 0 16px}
 .header h1{font-family:'Fredoka One',cursive;font-size:2.2rem;background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .header p{color:var(--text-light);font-size:.88rem;font-weight:600;margin-top:4px}
 .card{background:var(--card);border-radius:24px;padding:22px 20px;box-shadow:var(--shadow);margin-bottom:14px;border:2px solid rgba(192,132,252,.08);animation:slideUp .35s ease}
@@ -20,6 +20,7 @@ body::after{content:'';position:fixed;bottom:-30%;left:-15%;width:500px;height:5
 @keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .loading{text-align:center;padding:40px 20px}
 .loading-dots{display:flex;justify-content:center;gap:8px;margin-bottom:14px}
 .loading-dots span{width:12px;height:12px;border-radius:50%;background:var(--pink);animation:bounce 1.2s ease-in-out infinite}
@@ -36,20 +37,20 @@ body::after{content:'';position:fixed;bottom:-30%;left:-15%;width:500px;height:5
 .stats-pill{background:var(--card);border:2px solid var(--purple-light);border-radius:20px;padding:6px 13px;font-size:.77rem;font-weight:800;color:var(--text)}
 .stats-pill span{color:var(--pink)}
 .mode-title{font-family:'Fredoka One',cursive;font-size:1.28rem;text-align:center;margin-bottom:5px}
-.mode-subtitle{font-size:.82rem;color:var(--text-light);text-align:center;margin-bottom:18px;font-weight:600}
-.mode-card{border:2.5px solid var(--pink-light);border-radius:20px;padding:16px 18px;margin-bottom:10px;cursor:pointer;transition:all .2s;background:var(--pink-pale);display:flex;align-items:center;gap:13px}
+.mode-subtitle{font-size:.82rem;color:var(--text-light);text-align:center;margin-bottom:14px;font-weight:600}
+.mode-card{border:2.5px solid var(--pink-light);border-radius:20px;padding:14px 16px;margin-bottom:10px;cursor:pointer;transition:all .2s;background:var(--pink-pale);display:flex;align-items:center;gap:13px}
 .mode-card:hover{border-color:var(--pink);transform:translateY(-2px);box-shadow:var(--shadow-pink)}
 .mode-card.active{border-color:var(--pink);background:linear-gradient(135deg,#FFF0F7,#F3E8FF);box-shadow:var(--shadow-pink)}
-.mode-icon{font-size:1.9rem;min-width:46px;text-align:center}
-.mode-info h3{font-size:.93rem;font-weight:800;margin-bottom:2px}
-.mode-info p{font-size:.77rem;color:var(--text-light);font-weight:600}
-.test-type-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:14px}
-.test-type-btn{border:2.5px solid var(--purple-light);border-radius:18px;padding:17px 10px;cursor:pointer;background:var(--card);transition:all .2s;text-align:center;font-family:'Nunito',sans-serif}
+.mode-icon{font-size:1.7rem;min-width:42px;text-align:center}
+.mode-info h3{font-size:.91rem;font-weight:800;margin-bottom:2px}
+.mode-info p{font-size:.75rem;color:var(--text-light);font-weight:600}
+.test-type-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.test-type-btn{border:2.5px solid var(--purple-light);border-radius:18px;padding:14px 8px;cursor:pointer;background:var(--card);transition:all .2s;text-align:center;font-family:'Nunito',sans-serif}
 .test-type-btn:hover{border-color:var(--purple);transform:translateY(-2px)}
 .test-type-btn.selected{border-color:var(--purple);background:linear-gradient(135deg,#F3E8FF,#FFF0F7);box-shadow:0 4px 14px rgba(192,132,252,.28)}
-.test-type-btn .icon{font-size:1.75rem;display:block;margin-bottom:5px}
-.test-type-btn .label{font-size:.82rem;font-weight:800;color:var(--text)}
-.test-type-btn .desc{font-size:.71rem;color:var(--text-light);font-weight:600;margin-top:2px}
+.test-type-btn .icon{font-size:1.5rem;display:block;margin-bottom:5px}
+.test-type-btn .label{font-size:.75rem;font-weight:800;color:var(--text)}
+.test-type-btn .desc{font-size:.68rem;color:var(--text-light);font-weight:600;margin-top:2px}
 .quiz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
 .quiz-badge{background:linear-gradient(135deg,var(--pink-light),var(--purple-light));border-radius:11px;padding:5px 12px;font-size:.78rem;font-weight:800;color:var(--text);white-space:nowrap}
 .progress-bar{flex:1;margin:0 10px;height:10px;background:var(--pink-pale);border-radius:10px;overflow:hidden}
@@ -95,6 +96,28 @@ body::after{content:'';position:fixed;bottom:-30%;left:-15%;width:500px;height:5
 .deco-2{top:20%;right:4%;font-size:1.8rem}
 .deco-3{bottom:25%;left:3%;font-size:2.2rem}
 .deco-4{bottom:10%;right:6%;font-size:1.6rem}
+
+/* ── 짝 맞추기 ── */
+.match-wrap{position:relative;min-height:100vh;padding:16px 16px 80px}
+.match-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.match-title{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--text)}
+.match-score{background:linear-gradient(135deg,var(--pink-light),var(--purple-light));border-radius:14px;padding:6px 14px;font-size:.82rem;font-weight:800;color:var(--text)}
+.home-fab{position:fixed;bottom:24px;right:20px;z-index:100;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border:none;border-radius:50px;padding:12px 20px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;cursor:pointer;box-shadow:0 4px 18px rgba(255,107,157,.45);display:flex;align-items:center;gap:6px}
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.match-btn{border:2.5px solid var(--purple-light);border-radius:16px;padding:14px 10px;text-align:center;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:700;cursor:pointer;background:var(--card);color:var(--text);transition:all .18s;line-height:1.3;min-height:60px;display:flex;align-items:center;justify-content:center;word-break:keep-all}
+.match-btn:hover:not(:disabled){border-color:var(--purple);background:var(--purple-light);transform:scale(1.02)}
+.match-btn.selected{border-color:var(--pink);background:linear-gradient(135deg,#FFF0F7,#F3E8FF);box-shadow:var(--shadow-pink);transform:scale(1.03)}
+.match-btn.matched{border-color:var(--green-dark);background:linear-gradient(135deg,#D1FAE5,#A7F3D0);color:var(--green-dark);cursor:default;animation:pop .4s ease}
+.match-btn.wrong-flash{border-color:var(--red-dark);background:linear-gradient(135deg,#FEE2E2,#FECACA);animation:shake .3s ease}
+.match-btn:disabled{cursor:default}
+.match-wrong-msg{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--red-dark);color:#fff;font-family:'Fredoka One',cursive;font-size:1.4rem;padding:18px 32px;border-radius:20px;z-index:200;box-shadow:0 8px 32px rgba(239,68,68,.4);animation:fadeIn .15s ease;pointer-events:none}
+.match-round-clear{text-align:center;padding:20px;background:linear-gradient(135deg,#D1FAE5,#A7F3D0);border-radius:20px;margin-bottom:14px;animation:pop .4s ease}
+.match-round-clear p{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--green-dark)}
+.match-round-clear small{font-size:.82rem;color:var(--green-dark);font-weight:600}
+.match-stats-row{display:flex;gap:10px;margin-bottom:14px}
+.match-stat{flex:1;background:var(--pink-pale);border-radius:14px;padding:10px;text-align:center}
+.match-stat .v{font-size:1.3rem;font-weight:900;color:var(--text)}
+.match-stat .l{font-size:.7rem;color:var(--text-light);font-weight:600}
 </style>
 </head>
 <body>
@@ -102,19 +125,14 @@ body::after{content:'';position:fixed;bottom:-30%;left:-15%;width:500px;height:5
 <div class="deco deco-2">🌸</div>
 <div class="deco deco-3">✨</div>
 <div class="deco deco-4">🌟</div>
-<div class="container">
-  <div class="header">
-    <h1>🌸 단어 마스터</h1>
-    <p>귀여운 영어 단어 학습 앱</p>
-  </div>
-  <div id="app"></div>
-</div>
+<div id="root"></div>
+
 <script>
 var GAS = 'https://script.google.com/macros/s/AKfycbw4ylXI1NlZ-GaZMKnVQQIqppz2pBjd6XgDZSFOJkK6JV5IemI2lImH6Co6-MHDaHK8/exec';
 var words = [], records = {};
 var sessionWords = [], sessionIdx = 0, sessionCorrect = 0, sessionResults = [];
 var currentMode = null, currentTest = null, currentAnswer = null, answered = false;
-var app = document.getElementById('app');
+var root = document.getElementById('root');
 
 // ── API ──────────────────────────────────────────────────────────────────────
 function gasGet(params, cb) {
@@ -130,7 +148,6 @@ function gasGet(params, cb) {
 // ── LocalStorage ─────────────────────────────────────────────────────────────
 function loadLocal() { try { return JSON.parse(localStorage.getItem('vocabRec') || '{}'); } catch(e) { return {}; } }
 function saveLocal(r) { try { localStorage.setItem('vocabRec', JSON.stringify(r)); } catch(e) {} }
-
 function mergeRecords(sheet, local) {
   var out = {}, keys = {};
   Object.keys(sheet).forEach(function(w) { keys[w] = 1; });
@@ -145,27 +162,26 @@ function mergeRecords(sheet, local) {
 
 // ── Load ─────────────────────────────────────────────────────────────────────
 function loadData() {
-  renderLoading('단어 불러오는 중... 🌸');
+  setHTML('<div class="container"><div class="header"><h1>🌸 단어 마스터</h1><p>귀여운 영어 단어 학습 앱</p></div>' +
+    '<div class="card loading"><div class="loading-dots"><span></span><span></span><span></span></div>' +
+    '<p class="loading-msg">단어 불러오는 중... 🌸</p></div></div>');
   var wDone = false, rDone = false, wRes = null, rRes = null, errMsg = null;
-
   function tryFinish() {
-    if (errMsg) { renderError('데이터를 불러올 수 없어요 😢<br><br><strong>' + esc(errMsg) + '</strong>'); return; }
+    if (errMsg) { renderError(errMsg); return; }
     if (!wDone || !rDone) return;
-    if (!wRes.words || !Array.isArray(wRes.words)) { renderError('단어 데이터 형식 오류'); return; }
+    if (!wRes || !Array.isArray(wRes.words)) { renderError('단어 데이터 형식 오류'); return; }
     words = wRes.words;
-    records = mergeRecords(rRes.records || {}, loadLocal());
+    records = mergeRecords(rRes && rRes.records ? rRes.records : {}, loadLocal());
     currentMode = null; currentTest = null;
-    if (!words.length) { renderError('구글 시트에 단어가 없어요! A열에 영어 단어, B열에 뜻을 입력해주세요 📝'); }
-    else { renderHome(); }
+    if (!words.length) renderError('구글 시트에 단어가 없어요!');
+    else renderHome();
   }
-
   gasGet({ action: 'getWords' }, function(err, data) {
     if (err) { errMsg = err.message; tryFinish(); return; }
     wRes = data; wDone = true; tryFinish();
   });
   gasGet({ action: 'getRecords' }, function(err, data) {
-    if (err) { rRes = { records: {} }; }
-    else { rRes = data; }
+    rRes = err ? { records: {} } : data;
     rDone = true; tryFinish();
   });
 }
@@ -178,44 +194,48 @@ function saveRecord(word, ok) {
   gasGet({ action: 'saveRecord', word: word, correct: ok ? 'true' : 'false' }, function() {});
 }
 
+function setHTML(h) { root.innerHTML = h; }
+
 // ── Filter ───────────────────────────────────────────────────────────────────
 function getWordList(mode) {
   if (mode === 'new') return words.filter(function(w) { var r = records[w.word]; return !r || r.attempts < 10; });
-  return words.filter(function(w) {
+  if (mode === 'old') return words.filter(function(w) {
     var r = records[w.word];
     if (!r || r.attempts < 10) return false;
     return r.correct / r.attempts < 0.8;
   });
+  return words.slice(); // 'all'
 }
 
-// ── Render helpers ───────────────────────────────────────────────────────────
-function renderLoading(msg) {
-  app.innerHTML = '<div class="card loading"><div class="loading-dots"><span></span><span></span><span></span></div><p class="loading-msg">' + msg + '</p></div>';
-}
+// ── Error ─────────────────────────────────────────────────────────────────────
 function renderError(msg) {
-  app.innerHTML = '<div class="card"><div class="error-box">⚠️ ' + msg + '</div><button class="btn btn-primary" style="margin-top:14px" onclick="loadData()">다시 시도 🔄</button></div>';
+  setHTML('<div class="container"><div class="header"><h1>🌸 단어 마스터</h1></div>' +
+    '<div class="card"><div class="error-box">⚠️ ' + esc(msg) + '</div>' +
+    '<button class="btn btn-primary" style="margin-top:14px" onclick="loadData()">다시 시도 🔄</button></div></div>');
 }
 
 // ── Home ─────────────────────────────────────────────────────────────────────
 function renderHome() {
-  var nC = getWordList('new').length, oC = getWordList('old').length;
+  var nC = getWordList('new').length, oC = getWordList('old').length, aC = words.length;
   var tot = 0, cor = 0;
   Object.keys(records).forEach(function(k) { tot += records[k].attempts; cor += records[k].correct; });
-  var html = '<div class="card">';
+  var html = '<div class="container"><div class="header"><h1>🌸 단어 마스터</h1><p>귀여운 영어 단어 학습 앱</p></div><div class="card">';
   html += '<div class="stats-row">';
   html += '<div class="stats-pill">📚 전체 <span>' + words.length + '</span>단어</div>';
-  html += '<div class="stats-pill">✅ 총 시도 <span>' + tot + '</span></div>';
+  html += '<div class="stats-pill">✅ 시도 <span>' + tot + '</span></div>';
   html += '<div class="stats-pill">🎯 정답률 <span>' + (tot ? Math.round(cor / tot * 100) : 0) + '%</span></div>';
   html += '</div>';
   html += '<div class="mode-title">어떤 단어로 공부할까요?</div>';
   html += '<div class="mode-subtitle">학습 모드를 선택하세요 ✨</div>';
   html += '<div class="mode-card' + (currentMode === 'new' ? ' active' : '') + '" onclick="selMode(\'new\')">';
-  html += '<div class="mode-icon">🌱</div><div class="mode-info"><h3>신규 단어</h3><p>테스트 10회 미만 · <strong>' + nC + '개</strong> 준비됨</p></div></div>';
+  html += '<div class="mode-icon">🌱</div><div class="mode-info"><h3>신규 단어</h3><p>테스트 10회 미만 · <strong>' + nC + '개</strong></p></div></div>';
   html += '<div class="mode-card' + (currentMode === 'old' ? ' active' : '') + '" onclick="selMode(\'old\')">';
-  html += '<div class="mode-icon">💪</div><div class="mode-info"><h3>복습 단어</h3><p>10회↑이지만 정답률 80% 미만 · <strong>' + oC + '개</strong> 준비됨</p></div></div>';
+  html += '<div class="mode-icon">💪</div><div class="mode-info"><h3>복습 단어</h3><p>10회↑ 정답률 80% 미만 · <strong>' + oC + '개</strong></p></div></div>';
+  html += '<div class="mode-card' + (currentMode === 'all' ? ' active' : '') + '" onclick="selMode(\'all\')">';
+  html += '<div class="mode-icon">🎲</div><div class="mode-info"><h3>전체 랜덤</h3><p>모든 단어 중 랜덤 · <strong>' + aC + '개</strong></p></div></div>';
   if (currentMode) html += testTypeHTML();
-  html += '</div>';
-  app.innerHTML = html;
+  html += '</div></div>';
+  setHTML(html);
 }
 
 function testTypeHTML() {
@@ -223,7 +243,10 @@ function testTypeHTML() {
   html += '<div class="test-type-btn' + (currentTest === 'choice' ? ' selected' : '') + '" onclick="selTest(\'choice\')">';
   html += '<span class="icon">🔤</span><div class="label">뜻 선택</div><div class="desc">영어→뜻 고르기</div></div>';
   html += '<div class="test-type-btn' + (currentTest === 'type' ? ' selected' : '') + '" onclick="selTest(\'type\')">';
-  html += '<span class="icon">⌨️</span><div class="label">단어 입력</div><div class="desc">뜻→영어 쓰기</div></div></div>';
+  html += '<span class="icon">⌨️</span><div class="label">단어 입력</div><div class="desc">뜻→영어 쓰기</div></div>';
+  html += '<div class="test-type-btn' + (currentTest === 'match' ? ' selected' : '') + '" onclick="selTest(\'match\')">';
+  html += '<span class="icon">🔗</span><div class="label">짝 맞추기</div><div class="desc">단어↔뜻 매칭</div></div>';
+  html += '</div>';
   if (currentTest) html += '<button class="btn btn-primary" onclick="startQuiz()">시작하기 🚀</button>';
   return html;
 }
@@ -231,19 +254,22 @@ function testTypeHTML() {
 function selMode(m) { currentMode = m; currentTest = null; renderHome(); }
 function selTest(t) { currentTest = t; renderHome(); }
 
-// ── Quiz ─────────────────────────────────────────────────────────────────────
+// ── Quiz Start ────────────────────────────────────────────────────────────────
 function startQuiz() {
   var list = getWordList(currentMode);
   if (!list.length) {
-    var msg = currentMode === 'new' ? '신규 단어가 없어요! 구글 시트에 단어를 추가하거나 복습 모드를 써보세요.' : '복습할 단어가 없어요!';
-    app.innerHTML = '<div class="card"><div class="empty-state"><span class="emoji">🤔</span>' + msg + '</div><button class="btn btn-secondary" onclick="renderHome()">← 돌아가기</button></div>';
+    var msg = currentMode === 'new' ? '신규 단어가 없어요!' : currentMode === 'old' ? '복습할 단어가 없어요!' : '단어가 없어요!';
+    setHTML('<div class="container"><div class="card"><div class="empty-state"><span class="emoji">🤔</span>' + msg + '</div>' +
+      '<button class="btn btn-secondary" onclick="renderHome()">← 돌아가기</button></div></div>');
     return;
   }
+  if (currentTest === 'match') { startMatch(list); return; }
   sessionWords = shuffle(list.slice()).slice(0, 20);
   sessionIdx = 0; sessionCorrect = 0; sessionResults = [];
   renderQ();
 }
 
+// ── Quiz (선택형 / 입력형) ────────────────────────────────────────────────────
 function renderQ() {
   if (sessionIdx >= sessionWords.length) { renderResult(); return; }
   answered = false;
@@ -254,14 +280,13 @@ function renderQ() {
 
 function hdr() {
   var pct = Math.round(sessionIdx / sessionWords.length * 100);
-  var mL = currentMode === 'new' ? '🌱 신규' : '💪 복습';
+  var mL = currentMode === 'new' ? '🌱 신규' : currentMode === 'old' ? '💪 복습' : '🎲 랜덤';
   var tL = currentTest === 'choice' ? '🔤 선택형' : '⌨️ 입력형';
   return '<div class="quiz-header"><div class="quiz-badge">' + mL + ' · ' + tL + '</div>' +
     '<div class="progress-bar"><div class="progress-fill" style="width:' + pct + '%"></div></div>' +
     '<div class="quiz-badge">' + (sessionIdx + 1) + '/' + sessionWords.length + '</div></div>';
 }
 
-// ── 선택형 ───────────────────────────────────────────────────────────────────
 function renderChoiceQ() {
   var cur = currentAnswer;
   var pool = words.filter(function(w) { return w.word !== cur.word; });
@@ -271,17 +296,14 @@ function renderChoiceQ() {
     return '<button class="choice-btn" data-val="' + ea(c) + '" data-ans="' + ea(cur.meaning) + '">' +
       '<span class="choice-num">' + (i + 1) + '</span><span>' + esc(c) + '</span></button>';
   }).join('');
-  app.innerHTML = '<div class="card">' + hdr() +
+  setHTML('<div class="container"><div class="card">' + hdr() +
     '<div class="word-display"><span class="word-emoji">📖</span>' +
     '<div class="word-text">' + esc(cur.word) + '</div>' +
     '<div class="hint-text">올바른 뜻을 골라보세요!</div></div>' +
-    '<div class="choices">' + btns + '</div>' +
-    '<div id="fb"></div></div>';
-  var buttons = app.querySelectorAll('.choice-btn');
+    '<div class="choices">' + btns + '</div><div id="fb"></div></div></div>');
+  var buttons = root.querySelectorAll('.choice-btn');
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function() {
-      chkChoice(this, this.dataset.val, this.dataset.ans);
-    });
+    buttons[i].addEventListener('click', function() { chkChoice(this, this.dataset.val, this.dataset.ans); });
   }
 }
 
@@ -289,7 +311,7 @@ function chkChoice(btn, selected, correct) {
   if (answered) return;
   answered = true;
   var ok = selected === correct;
-  var buttons = app.querySelectorAll('.choice-btn');
+  var buttons = root.querySelectorAll('.choice-btn');
   for (var i = 0; i < buttons.length; i++) {
     buttons[i].disabled = true;
     if (buttons[i].dataset.val === correct) buttons[i].classList.add('correct');
@@ -300,62 +322,43 @@ function chkChoice(btn, selected, correct) {
   setTimeout(function() { sessionIdx++; renderQ(); }, 1000);
 }
 
-// ── 입력형 ───────────────────────────────────────────────────────────────────
 function renderTypeQ() {
   var cur = currentAnswer;
-  app.innerHTML = '<div class="card">' + hdr() +
+  setHTML('<div class="container"><div class="card">' + hdr() +
     '<div class="word-display"><span class="word-emoji">💭</span>' +
     '<div class="meaning-display">' + esc(cur.meaning) + '</div>' +
     '<div class="hint-text">뜻에 맞는 영어 단어를 입력하세요!</div></div>' +
     '<input class="type-input" id="ti" type="text" placeholder="영어 단어 입력..." ' +
     'autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">' +
     '<button class="btn submit-btn" id="subBtn" type="button">확인 ✓</button>' +
-    '<div id="fb"></div></div>';
-
-  var ti = app.querySelector('#ti');
-  var subBtn = app.querySelector('#subBtn');
-
-  // 버튼 클릭: 마우스로 클릭할 때만 반응
-  subBtn.addEventListener('mousedown', function(e) {
-    e.preventDefault(); // 포커스 이동 방지
-  });
-  subBtn.addEventListener('click', function() {
-    chkType();
-  });
-
-  // 입력창 Enter: 정답 확인
-  ti.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      chkType();
-    }
-  });
-
+    '<div id="fb"></div></div></div>');
+  var ti = root.querySelector('#ti');
+  var subBtn = root.querySelector('#subBtn');
+  subBtn.addEventListener('mousedown', function(e) { e.preventDefault(); });
+  subBtn.addEventListener('click', function() { chkType(); });
+  ti.addEventListener('keydown', function(e) { if (e.key === 'Enter') { e.preventDefault(); chkType(); } });
   setTimeout(function() { if (ti) ti.focus(); }, 50);
 }
 
 function chkType() {
   if (answered) return;
-  var inp = app.querySelector('#ti');
+  var inp = root.querySelector('#ti');
   if (!inp) return;
-  var userVal = inp.value.trim().toLowerCase();
-  var correctVal = currentAnswer.word.toLowerCase();
-  var ok = userVal === correctVal;
+  var ok = inp.value.trim().toLowerCase() === currentAnswer.word.toLowerCase();
   answered = true;
   inp.disabled = true;
-  inp.classList.add(ok ? 'correct' : 'wrong');
-  var subBtn = app.querySelector('#subBtn');
+  var subBtn = root.querySelector('#subBtn');
   if (subBtn) subBtn.disabled = true;
+  inp.classList.add(ok ? 'correct' : 'wrong');
   showFeedback(ok, currentAnswer.word);
   saveRecord(currentAnswer.word, ok);
   setTimeout(function() { sessionIdx++; renderQ(); }, 1000);
 }
 
-// ── 피드백 ───────────────────────────────────────────────────────────────────
 function showFeedback(ok, correctVal) {
   sessionResults.push({ word: currentAnswer.word, isCorrect: ok });
   if (ok) sessionCorrect++;
-  var fb = app.querySelector('#fb');
+  var fb = root.querySelector('#fb');
   if (!fb) return;
   var html = '<div class="feedback-box ' + (ok ? 'correct' : 'wrong') + '">';
   html += ok ? '🎉 정답이에요!' : '😅 아쉬워요!';
@@ -387,7 +390,7 @@ function renderResult() {
     });
     wrongHTML += '</div>';
   }
-  app.innerHTML = '<div class="card">' +
+  setHTML('<div class="container"><div class="card">' +
     '<span class="result-emoji">' + em + '</span>' +
     '<div class="result-title">' + msg + '</div>' +
     '<div class="result-score">' + pct + '%</div>' +
@@ -397,7 +400,146 @@ function renderResult() {
     '<div class="stat-box"><div class="stat-val">❌ ' + (total - sessionCorrect) + '</div><div class="stat-lbl">오답</div></div>' +
     '</div>' + wrongHTML +
     '<button class="btn btn-primary" onclick="startQuiz()">다시 풀기 🔄</button>' +
-    '<button class="btn btn-secondary" onclick="renderHome()">홈으로 🏠</button></div>';
+    '<button class="btn btn-secondary" onclick="renderHome()">홈으로 🏠</button></div></div>');
+}
+
+// ── 짝 맞추기 ─────────────────────────────────────────────────────────────────
+var matchPool = [];       // 이번 세션 전체 단어 풀
+var matchRoundWords = []; // 현재 라운드 5단어
+var matchSelected = null; // 현재 선택된 버튼 {el, type, word}
+var matchPaired = 0;      // 현재 라운드 맞춘 수
+var matchTotalCorrect = 0;
+var matchTotalWrong = 0;
+var matchTotalPairs = 0;
+var matchLocked = false;
+
+function startMatch(list) {
+  matchPool = shuffle(list.slice());
+  matchTotalCorrect = 0; matchTotalWrong = 0; matchTotalPairs = 0;
+  matchSelected = null; matchLocked = false;
+  renderMatchRound();
+}
+
+function renderMatchRound() {
+  // 5단어 선정 (풀에서 순서대로, 다 쓰면 다시 섞어서)
+  if (matchPool.length < 5) matchPool = shuffle(getWordList(currentMode).slice());
+  matchRoundWords = matchPool.splice(0, 5);
+  matchPaired = 0;
+  matchSelected = null;
+  matchLocked = false;
+
+  var buttons = makeMatchButtons(matchRoundWords);
+  renderMatchUI(buttons);
+}
+
+function makeMatchButtons(wList) {
+  // 영어단어 5개 + 뜻 5개 → 섞어서 배치
+  var items = [];
+  wList.forEach(function(w) {
+    items.push({ type: 'word', word: w.word, label: w.word });
+    items.push({ type: 'meaning', word: w.word, label: w.meaning });
+  });
+  return shuffle(items);
+}
+
+function renderMatchUI(buttons) {
+  var mL = currentMode === 'new' ? '🌱 신규' : currentMode === 'old' ? '💪 복습' : '🎲 랜덤';
+  var html = '<div class="match-wrap">';
+  html += '<div class="match-header">';
+  html += '<div class="match-title">🔗 짝 맞추기</div>';
+  html += '<div class="match-score">' + mL + ' · ' + matchRoundWords.length + '쌍</div>';
+  html += '</div>';
+  html += '<div class="match-stats-row">';
+  html += '<div class="match-stat"><div class="v">✅ ' + matchTotalCorrect + '</div><div class="l">정답</div></div>';
+  html += '<div class="match-stat"><div class="v">❌ ' + matchTotalWrong + '</div><div class="l">오답</div></div>';
+  html += '<div class="match-stat"><div class="v">🔗 ' + matchTotalPairs + '</div><div class="l">완료 쌍</div></div>';
+  html += '</div>';
+  html += '<div class="match-grid" id="matchGrid">';
+  buttons.forEach(function(item, idx) {
+    html += '<button class="match-btn" data-idx="' + idx + '" data-type="' + item.type + '" data-word="' + ea(item.word) + '">' + esc(item.label) + '</button>';
+  });
+  html += '</div></div>';
+  // FAB 홈버튼
+  html += '<button class="home-fab" onclick="renderHome()">🏠 홈으로</button>';
+  setHTML(html);
+
+  // 버튼 이벤트
+  var btns = root.querySelectorAll('.match-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function() { onMatchClick(this); });
+  }
+}
+
+function onMatchClick(el) {
+  if (matchLocked) return;
+  if (el.classList.contains('matched')) return;
+
+  // 같은 버튼 다시 클릭 → 선택 해제
+  if (matchSelected && matchSelected.el === el) {
+    el.classList.remove('selected');
+    matchSelected = null;
+    return;
+  }
+
+  if (!matchSelected) {
+    // 첫 번째 선택
+    el.classList.add('selected');
+    matchSelected = { el: el, type: el.dataset.type, word: el.dataset.word };
+    return;
+  }
+
+  // 두 번째 선택 → 판정
+  var first = matchSelected;
+  matchSelected = null;
+  first.el.classList.remove('selected');
+
+  var sameWord = first.word === el.dataset.word;
+  var diffType = first.type !== el.dataset.type;
+
+  if (sameWord && diffType) {
+    // 정답!
+    el.classList.add('matched');
+    first.el.classList.add('matched');
+    el.disabled = true; first.el.disabled = true;
+    matchPaired++;
+    matchTotalCorrect++;
+    matchTotalPairs++;
+    saveRecord(el.dataset.word, true);
+    updateMatchStats();
+    if (matchPaired === matchRoundWords.length) {
+      // 라운드 클리어 → 잠깐 보여주고 다음 라운드
+      matchLocked = true;
+      setTimeout(function() { renderMatchRound(); }, 800);
+    }
+  } else {
+    // 오답
+    matchTotalWrong++;
+    matchLocked = true;
+    el.classList.add('wrong-flash');
+    first.el.classList.add('wrong-flash');
+    // 오답 메시지 표시
+    var msg = document.createElement('div');
+    msg.className = 'match-wrong-msg';
+    msg.textContent = '오답입니다 ❌';
+    root.appendChild(msg);
+    setTimeout(function() {
+      el.classList.remove('wrong-flash');
+      first.el.classList.remove('wrong-flash');
+      if (msg.parentNode) msg.parentNode.removeChild(msg);
+      matchLocked = false;
+      updateMatchStats();
+    }, 500);
+  }
+}
+
+function updateMatchStats() {
+  // 통계 숫자만 업데이트
+  var statEls = root.querySelectorAll('.match-stat .v');
+  if (statEls.length >= 3) {
+    statEls[0].textContent = '✅ ' + matchTotalCorrect;
+    statEls[1].textContent = '❌ ' + matchTotalWrong;
+    statEls[2].textContent = '🔗 ' + matchTotalPairs;
+  }
 }
 
 // ── 유틸 ─────────────────────────────────────────────────────────────────────
@@ -408,8 +550,8 @@ function shuffle(a) {
   }
   return a;
 }
-function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-function ea(s) { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;'); }
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function ea(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;'); }
 
 loadData();
 </script>
